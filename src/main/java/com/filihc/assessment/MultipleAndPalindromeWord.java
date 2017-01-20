@@ -15,6 +15,7 @@ public class MultipleAndPalindromeWord {
 	
 	public String getMultipleAndPalindromeWord(Integer numInput, String strInput){
 		String strOutput = new String();
+		strInput = strInput.toUpperCase();
 		lstMultiple = new ArrayList<String>();
 		lstPalindrome = new ArrayList<String>();
 		

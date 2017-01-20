@@ -23,9 +23,9 @@ public class MultipleAndPalindromeWordTest {
 	@Test
 	public void doTest() {
 		
-		String strExpected = "[80, 9892160, 16, ANNA, NOON, ABA]";
-		String strInput = "ANNA BAKES 80 CAKES IN THE NOON, 989216011, 16 ABA";
-		Integer numInput = 8;
+		String strExpected = "[2012, 20, 108, ANNA, NOON, ABA]";
+		String strInput = "ANNA BAKES 2012 CAKES IN THE NOON, 201, 1089 ABA";
+		Integer numInput = 2;
 		
 		String result = multipleAndPalindromeWord.getMultipleAndPalindromeWord(numInput, strInput);
 		logger.info("expected: {} --> result: {}", strExpected, result);
