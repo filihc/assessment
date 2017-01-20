@@ -1,6 +1,6 @@
 package com.filihc.assessment.test;
 
-import static org.junit.Assert.*;
+import static org.junit.Assert.assertTrue;
 
 import java.text.DecimalFormat;
 
@@ -17,8 +17,8 @@ public class NumberEnglishStringTest {
 	@Test
 	public void doTest() {
 		DecimalFormat df = new DecimalFormat("###,###,###,###");
-		Integer number = 10000;
-		String strExpected = "ten thousand";
+		Integer number = 10001;
+		String strExpected = "ten thousand, one";
 		String result = numberToEnglishString(number);
 		logger.info("expected {} --> {}", df.format(number), result);
 		assertTrue("bad convertion: " + number + " -> " + result, result.equals(strExpected));
@@ -27,7 +27,7 @@ public class NumberEnglishStringTest {
 	@Test
 	public void doTestLoop(){
 		Integer i = 0;
-		for(i=0; i<2000000; i++){
+		for(i=0; i<100; i++){
 			String result = numberToEnglishString(i);
 			logger.info("{} --> {}", i, result);
 		}
