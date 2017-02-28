@@ -21,7 +21,7 @@ public class MultipleAndPalindromeWordTest {
 	}
 	
 	@Test
-	public void doTest() {
+	public void testSuccess() {
 		
 		String strExpected = "[2012, 20, 108, ANNA, NOON, ABA]";
 		String strInput = "ANNA BAKES 2012 CAKES IN THE NOON, 201, 1089 ABA";
@@ -32,5 +32,30 @@ public class MultipleAndPalindromeWordTest {
 		
 		assertTrue("Bad implementation", strExpected.equals(result));
 	}
+	
+	@Test
+	public void testNoOutput() {
+		
+		String strExpected = "";
+		String strInput = "CANADA";
+		Integer numInput = 2;
+		
+		String result = multipleAndPalindromeWord.getMultipleAndPalindromeWord(numInput, strInput);
+		logger.info("expected: {} --> result: {}", strExpected, result);
+		
+		assertTrue("Bad implementation", strExpected.equals(result));
+	}
 
+	@Test
+	public void testInvalidNumber() {
+		
+		String strExpected = "[ANNA, NOON, ABA]";
+		String strInput = "ANNA BAKES 2012 CAKES IN THE NOON, 201, 1089 ABA";
+		Integer numInput = 11;
+		
+		String result = multipleAndPalindromeWord.getMultipleAndPalindromeWord(numInput, strInput);
+		logger.info("expected: {} --> result: {}", strExpected, result);
+		
+		assertTrue("Bad implementation", strExpected.equals(result));
+	}
 }

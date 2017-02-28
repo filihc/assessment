@@ -49,7 +49,7 @@ public class MultipleAndPalindromeWord {
 		try{
 			do{
 				number = Integer.valueOf(word);
-				if(number%numInput == 0 && (numInput > 0 && numInput < 10) ){
+				if((numInput > 0 && numInput < 10) && number%numInput == 0){
 						lstMultiple.add(number.toString());
 						logger.debug("multiple: {}", number);
 						return true;
@@ -60,7 +60,7 @@ public class MultipleAndPalindromeWord {
 				}
 			}while(word.length() > 0);
 			
-		}catch(NumberFormatException e){
+		} catch(Exception e){
 			flag = false;
 		}
 		return flag;
