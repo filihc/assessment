@@ -1,0 +1,16 @@
+limits-service:
+  minimum: 6
+  maximum: 666
+---
+spring:
+  profiles: prod
+limits-service:
+  minimum: 1
+  maximum: 111
+---
+spring:
+  profiles: qa
+limits-service:
+  minimum: 99
+  maximum: 9999
+  
